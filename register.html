@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Register - FoodHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Create Account</h2>
+    <form id="registerForm" method="post" action="/actions/registers.php" novalidate>
+      <label>Name<br><input type="text" name="name" id="name" required minlength="3"></label><br>
+      <label>Email<br><input type="email" name="email" id="email" required></label><br>
+      <label>Password<br><input type="password" name="password" id="password" required minlength="8"></label><br>
+      <label>Confirm Password<br><input type="password" id="confirm_password" required></label><br>
+      <button class="btn" type="submit">Register</button>
+    </form>
+    <div id="msg"></div>
+  </div>
+
+  <script>
+  
+  document.getElementById('registerForm').addEventListener('submit', function(e){
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const pwd = document.getElementById('password').value;
+    const cpwd = document.getElementById('confirm_password').value;
+    const msg = document.getElementById('msg');
+    msg.innerText = '';
+
+    if(name.length < 3){ msg.innerText = 'Name must be at least 3 characters'; e.preventDefault(); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.innerText = 'Invalid email'; e.preventDefault(); return; }
+    if(pwd.length < 8){ msg.innerText = 'Password must be at least 8 chars'; e.preventDefault(); return; }
+    if(pwd !== cpwd){ msg.innerText = 'Passwords do not match'; e.preventDefault(); return; }
+
+
+  });
+  </script>
+</body>
+</html>

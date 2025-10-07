@@ -1,0 +1,152 @@
+:root{--accent:#d9534f;--muted:#666}
+*{box-sizing:border-box;font-family:Inter,Arial,Helvetica,sans-serif}
+body{margin:0;color:#222}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.4rem;color:var(--accent)}
+.nav a{margin-left:12px;text-decoration:none;color:inherit}
+.btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;padding:24px}
+.hero-image img{width:100%;border-radius:12px}
+.features{display:flex;gap:12px;margin-top:20px}
+.card{flex:1;padding:16px;background:#fafafa;border-radius:8px;text-align:center}
+.slider{margin-top:24px}
+
+
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr}
+  .nav{display:none}
+}
+
+
+.faq-item{border-bottom:1px solid #eee;padding:12px}
+.faq-item button{background:none;border:none;padding:0;font-size:1rem}
+
+
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;border:1px solid #eaeaea}
+
+
+/* ======== GLOBAL RESET ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ======== HEADER ======== */
+header {
+  background: #ff6347; /* tomato red */
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #fff3eb;
+  padding: 10px 0;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6347;
+}
+
+/* ======== MAIN CONTAINER ======== */
+.container {
+  flex: 1;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== BUTTONS ======== */
+button,
+input[type="submit"] {
+  background: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #e04d30;
+}
+
+/* ======== FORMS ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea,
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 8px 0;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
